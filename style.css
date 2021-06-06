@@ -45,20 +45,19 @@ a{
 }
 
 .banner-conteudo{
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap ;
+    width: 55%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     position: relative;
     left: 50%;
+    right: 50%;
     transform: translate(-50%);
 }
+
 .card{
-    flex-basis: 45%;
-    flex-grow: 1;
     color: #fff;
-    margin:13px;
     border: 1px solid #fff;
+    margin-bottom: 20px;
     border-radius: 10px;
     width: 320px;
     min-height: 250px;
@@ -66,8 +65,8 @@ a{
     position: relative;
     top: 50px;
     left: 50%;
+    right: 50%;
     transform: translate(-50%);
-    
 }
 .card-title{
     margin-left:10px ;
@@ -193,4 +192,11 @@ a{
     transition: 0.5s;
     border-color: black;
     color: black;
+}
+
+@media  (max-width: 1200px) {
+    .banner-conteudo{
+        width: 70%;
+     grid-template-columns: repeat(1,1fr);
+    }
 }
