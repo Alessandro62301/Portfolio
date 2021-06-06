@@ -36,6 +36,19 @@ function showRepositories(repos){
 
 }
 
+function darkMode(){
+    var element = document.querySelector("body");
+
+    if(element.classList == "dark-mode"){
+        element.classList.remove("dark-mode");
+    }
+    else{
+        element.classList.add("dark-mode");
+    }
+}
+
+
+
 
 getUser().then(res => {showRepositories(res.repositories)});
 
