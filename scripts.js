@@ -20,15 +20,20 @@
         function showRepositories(repos){
             let output = "";
         
+
             repos.forEach(repo => {
-                output = 
-                `
-                <div class="card">
-                    <h1 class="card-title">${repo.name}</h1>
-                    <h4 class="card-title">${repo.description}</h4>
-                </div>
-                `      
-                context.innerHTML += output;
+            
+                    output = 
+                    `<a href="${repo.html_url}"
+                    <div class="card">
+                        <h1 class="card-title">${repo.name}</h1>
+                        <h4 class="card-title">${repo.description}</h4>
+                    </div>
+                    </a>
+                    `   
+                    context.innerHTML += output;
+                
+               
             });
         
         
